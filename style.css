@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color:#fff;
+}
+
+html{
+    font-family: Raleway;
+}
+
+header{
+    width:100%;
+    position: fixed;
+    /* background-image: linear-gradient(to bottom , rgba(0,0,0,0.23) , rgba(0,0,0,0.74)); */
+     /* box-shadow: 0 20px 30px 0 rgba(0,0,0,0.45); */
+    padding: 2rem;
+}
+
+header .container{
+    
+ display:flex;
+ justify-content: space-between;
+}
+
+header .header__left a span{
+  color:#ef7215;
+  font-weight: bold;
+}
+
+header .header__left a h3{
+    /* font-size: 25px; */
+}
+
+header .container ul{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container ul li{
+    margin-right: 60px;
+    transition: 0.3s ease-in;
+
+}
+
+header .container ul li a::after{
+    content:"";
+    display:block;
+     width:0%;
+     padding-top:7px;
+     border-bottom: 2px solid #ef7215;
+     transition: 0.3s ease-in;
+}
+
+header .container ul li a:hover::after{
+    width:100%;
+}
+
+header .container ul li:hover{
+    font-weight: bold;
+}
+
+header .container ul li.active{
+    font-weight: bold;
+}
+
+
+header .container ul li.active a::after{
+    width:100%;
+}
+
+
+header .container button{
+    border:none;
+    outline:none;
+    background-color: #ef7215;
+    color:#fff;
+    border-radius:999px;
+    padding:0.8rem 1.3rem;
+  transition: 0.3s ease-in;
+  cursor:pointer;
+}
+
+header .container button:hover{
+    transform:translateY(-10px);
+     box-shadow: 0 20px 30px 0 rgba(0,0,0,0.45);
+}
+
+section.banner{
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image:  linear-gradient(to right , rgba(0,0,0,0.4) , rgba(0,0,0,0.92) ) , url('images/bga.jpg');
+    background-position:center/top;
+    background-size:cover;
+    background-repeat: no-repeat;
+    color:#ffff;
+    padding: 2rem;
+}
+
+.banner .container{
+    width:80%;
+    margin:auto;
+    text-align: center;
+}
+
+.banner h4{
+    padding-bottom:10px;
+
+}
+
+.banner h1{
+    font-size: 70px;
+    padding: 10px 0;
+    color:#ef7215;
+}
+
+
+.banner .buttons{
+    padding-top: 20px;
+}
+
+.buttons button{
+    border:none;
+    outline:none;
+    margin-right: 30px;
+    padding:0.8rem 2rem;
+    border-radius: 999px;
+    cursor:pointer;
+}
+
+.buttons button:nth-of-type(1){
+    background-color: #ef7215;
+    color:#fff;
+    transition:  0.3s ease-in;
+}
+
+.buttons button:nth-of-type(1):hover{
+    transform:translateY(-8px);
+}
+
+.buttons button:nth-of-type(2){
+    background-color:transparent;
+    border: 3px solid #ef7215;
+    color:#fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.buttons button:nth-of-type(2) span{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:0%;
+    background-color: #ef7215;
+    transition: 0.3s ease-in;
+    z-index: -1;
+    
+}
+
+
+.buttons button:nth-of-type(2):hover span{
+    width:100%;
+}
+
+.links{
+    position: fixed;
+    left:0;
+    top:40%;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.links a {
+    padding:10px;
+    background-color: #ef7215;
+    border-bottom:1px solid rgba(0,0,0,0.4);
+}
+
+.links a i{
+    font-size: 24px;
+}
+
+
+@media(max-width:600px){
+ 
+  
+
+    html{
+        font-size: 82.5%;
+    }
+
+    .banner .container{
+        width:90%;
+    }
+
+    .banner h1{
+        font-size: 60px;
+    }
+
+    .buttons button{
+        padding:0.8rem 1.5rem;
+        border-radius: 999px;
+        cursor:pointer;
+    }
+}
+
