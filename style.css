@@ -481,6 +481,20 @@ section.banner{
         margin-bottom: 10px;
         border-radius: 3px;
     }
+  
+    .socialmedia li:first-of-type{
+        background:#4267B2;
+    }
+    .socialmedia li:nth-of-type(2){
+        background: #cd486b	;
+    }
+  .socialmedia li:nth-of-type(3){
+      background: #1DA1F2;
+  }
+   .socialmedia li:nth-of-type(4){
+       background: 	#075E54;
+   }
+ 
     .socialmedia li a i{
         margin-right: 5px;
     }
