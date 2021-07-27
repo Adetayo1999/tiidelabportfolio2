@@ -20,18 +20,29 @@ html{
     font-family: Raleway;
 }
 
+.ham{
+    display: none;
+}
+
 header{
     width:100%;
     position: fixed;
     /* background-image: linear-gradient(to bottom , rgba(0,0,0,0.23) , rgba(0,0,0,0.74)); */
      /* box-shadow: 0 20px 30px 0 rgba(0,0,0,0.45); */
-    padding: 2rem;
+    padding: 1.3rem 2rem;
+    z-index: 100;
+    transition: 0.3s ease-in;
+}
+
+header.dark{
+    background-color: black;
 }
 
 header .container{
     
  display:flex;
  justify-content: space-between;
+ align-items: center;
 }
 
 header .header__left a span{
@@ -127,6 +138,8 @@ section.banner{
     font-size: 70px;
     padding: 10px 0;
     color:#ef7215;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
 }
 
 
@@ -198,10 +211,132 @@ section.banner{
     font-size: 24px;
 }
 
+   .about , .contact{
+       padding: 1.5rem;
+
+   }
+
+   .contact{
+       background-color: #eee;
+   }
+
+   .about .container , .contact .container{
+         margin:auto;
+         width:80%;
+   }
+
+    .about h2 , .contact h2{
+        text-align: center;
+    }
+     .about h2 span , .contact h2 span{
+         color: #ef7215;
+         font-size: 45px;
+     }
+
+     .about h2::after , .contact h2::after{
+         content:"";
+         margin:auto;
+         border-bottom: 3px solid #ef7215;
+         width:7%;
+         display: block;
+         padding-top: 5px;
+     }
+
+     .about__container , .contact__container{
+         display: flex;
+         justify-content: center;
+         /* align-items: center; */
+         margin: 20px 0;
+         padding:1rem;
+     }
+
+
+     .about__container img , .contact__container img{
+         width: 500px;
+     }
+
+     .about__container .about__left , .contact__container .contact__left{
+         margin-right: 20px;
+     }
+
+          .contact__right input , .contact__right textarea{
+              border:none;
+              outline:none;
+              padding:0.8rem 1.5rem;
+              border:1px solid #ef7215;
+              box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14);  
+          }
+
+          .contact__right input{
+              border-radius: 999px;
+            margin-right: 15px;
+           
+          }
+
+       
+
+
+
+          .contact__right textarea{
+              width:100%;
+              border-radius: 15px;
+              margin-bottom: 15px;
+          }
+
+          .contact__right .row{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 15px;
+          }
+
+          .btn button{
+              border:none;
+              outline:none;
+              width:100%;
+              color:#fff;
+              background-color: #ef7215;
+              padding: 0.8rem 1.5rem;
+              border-radius: 6px;
+          }
+
 
 @media(max-width:600px){
  
-  
+     .links{
+         display: none;
+     }
+
+  .banner button{
+         display: block;
+         margin-bottom: 15px;
+         width:100%;
+         transition: none !important;
+         border-radius: 10px !important;
+         background-color: transparent !important;
+         border: 2px solid #ef7215 !important;
+  }
+
+     .banner button:hover{
+         transform:translateY(0) !important;
+     }
+
+     .banner button span {
+         display: none;
+     }
+        .about__container , .contact__container{
+            flex-direction: column;
+        }
+
+        .about__container img , .contact__container img{
+            width: 100%;
+        }
+   
+
+
+  .header__center , .header__right{
+      display:none;
+  }
 
     html{
         font-size: 82.5%;
@@ -212,7 +347,7 @@ section.banner{
     }
 
     .banner h1{
-        font-size: 60px;
+        font-size: 50px;
     }
 
     .buttons button{
@@ -220,5 +355,41 @@ section.banner{
         border-radius: 999px;
         cursor:pointer;
     }
+
+    
+.ham{
+    display:block;
+    padding:0.6rem;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ef7215;
+    height: 32px;
+    cursor:pointer;
+}
+
+  .ham i{
+      color:#fff;
+      font-size: 20px;
+        transition: 0.3s ease-out;
+    }
+
+    .row{
+    flex-direction: column;
+    margin: 0 !important;
+    }
+
+    .contact__right{
+        margin-top: 20px;
+    }
+
+    .contact input{
+        width:100%;
+        margin-bottom: 15px;
+    }
+        .contact__right .form__group{
+            width:100%;
+        }
 }
 
