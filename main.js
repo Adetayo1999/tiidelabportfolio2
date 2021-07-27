@@ -1,5 +1,6 @@
 const header = document.querySelector('header');
-
+const hamTarget = document.querySelector(".hamburger__target");
+const hamContent = document.querySelector(".content");
 
 window.addEventListener('scroll' , () => {
 
@@ -25,11 +26,16 @@ Hamburger.addEventListener('click' , () => {
         if(!showMenu){
              HamIcon.classList.remove('fa-bars');
              HamIcon.classList.add('fa-times');
+             hamTarget.classList.add('open');
+             hamContent.classList.add('open');
+
             showMenu = true;
         }
         else{
             HamIcon.classList.remove('fa-times')
-            HamIcon.classList.add('fa-bars');   
+            HamIcon.classList.add('fa-bars');
+            hamTarget.classList.remove('open');
+            hamContent.classList.remove('open');
             showMenu = false;
         }
 
