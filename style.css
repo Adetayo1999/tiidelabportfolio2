@@ -205,7 +205,9 @@ section.banner{
     padding:10px;
     background-color: #ef7215;
     border-bottom:1px solid rgba(0,0,0,0.4);
+    cursor: pointer;
 }
+
 
 .links a i{
     font-size: 24px;
@@ -312,7 +314,7 @@ section.banner{
           .hamburger__target{
               opacity: 0;
               transition: 0.4s ease-in;
-             
+             visibility: hidden;
              position: fixed;
              top:0;
              left:0;
@@ -327,15 +329,14 @@ section.banner{
               width:50%;
               height:100%;
               background-color: black;
-          }
-
-          .hamburger__target .content{
               display: flex;
               flex-direction: column;
-            justify-content: space-between;             
+            justify-content: space-evenly;             
               padding: 2rem;
               padding-top: 6rem;
           }
+
+         
 
           .hamburger__target .content li {
               padding: 1rem;
@@ -499,6 +500,10 @@ section.banner{
         margin-right: 5px;
     }
 
+    footer hr{
+        border-color:rgb(82, 78, 78);
+    }
+
 
 @media(max-width:600px){
 
@@ -509,6 +514,10 @@ section.banner{
     .moments .box{
         height:250px;
         margin-bottom: 15px;
+    }
+
+    .moments .box{
+        border-radius: 0;
     }
 
 
@@ -614,8 +623,7 @@ section.banner{
         }
 
         .hamburger__target.open{
-            display: block;
-          
+            visibility: visible;    
             background-color:rgba(0,0,0,0.65);
             opacity: 1;
         }
@@ -648,3 +656,21 @@ section.banner{
         }
 }
 
+
+
+@media(max-width:450px){
+    .hamburger__target .content{
+        width:70%;
+    }
+}
+
+
+@media(max-width:360px){
+    html{
+        font-size: 72.5%;
+    }
+
+    .banner h1{
+        font-size: 45px;
+    }
+}
