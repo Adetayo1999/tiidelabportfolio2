@@ -5,11 +5,11 @@ const hamContent = document.querySelector(".content");
 window.addEventListener('scroll' , () => {
 
            if(document.documentElement.scrollTop > 50 || document.body.scrollTop > 50){
-               console.log("Greater Than 50");
+              
                header.classList.add('dark');
            }
            else{
-               console.log("Less Than 50");
+              
                header.classList.remove('dark')
            }
 
@@ -42,3 +42,13 @@ Hamburger.addEventListener('click' , () => {
 
 
 })
+
+
+   document.body.addEventListener('click' , (e) => {
+        if(e.target === hamTarget){
+            HamIcon.classList.remove('fa-times')
+            HamIcon.classList.add('fa-bars');
+            hamTarget.classList.remove('open');
+            hamContent.classList.remove('open');
+        }
+   })
