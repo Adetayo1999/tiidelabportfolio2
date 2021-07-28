@@ -706,13 +706,28 @@ section.banner{
         color:#fff;
     }
 
-@media(max-width:600px){
-    .projects .project{
-        /* width:300px; */
-        /* height:300px; */
-        
+    .arrow__up{
+           position: fixed;
+           right:30px;
+           bottom:30px;
+             width:40px;
+             height:40px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+           background: #ef7215;
+           border-radius: 50%;
+           transition: 0.3s ease-in;
+           transform:scale(0);
     }
- 
+
+     .arrow__up.show{
+         transform:scale(1);
+     }
+
+
+@media(max-width:600px){
+    
 
    .services__container{
        flex-direction: column;

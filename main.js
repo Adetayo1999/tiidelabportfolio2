@@ -1,7 +1,7 @@
 const header = document.querySelector('header');
 const hamTarget = document.querySelector(".hamburger__target");
 const hamContent = document.querySelector(".content");
-
+const arrowUp = document.querySelector('.arrow__up');
 window.addEventListener('scroll' , () => {
 
            if(document.documentElement.scrollTop > 50 || document.body.scrollTop > 50){
@@ -16,6 +16,19 @@ window.addEventListener('scroll' , () => {
 
 })
 
+window.addEventListener('scroll' , () => {
+
+    if(document.documentElement.scrollTop > 100 || document.body.scrollTop > 100){
+       
+        arrowUp.classList.add('show');
+    }
+    else{
+       
+        arrowUp.classList.remove('show');
+    }
+
+
+})
 
 const Hamburger = document.querySelector('.ham');
 const HamIcon = Hamburger.querySelector('i');
