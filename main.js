@@ -18,12 +18,11 @@ window.addEventListener('scroll' , () => {
 
 window.addEventListener('scroll' , () => {
 
-    if(document.documentElement.scrollTop > 100 || document.body.scrollTop > 100){
+    if(document.documentElement.scrollTop > 500 || document.body.scrollTop > 500){
        
         arrowUp.classList.add('show');
     }
-    else{
-       
+    else{      
         arrowUp.classList.remove('show');
     }
 
