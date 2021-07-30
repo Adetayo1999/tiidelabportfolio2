@@ -147,6 +147,7 @@ section.banner{
     padding-top: 20px;
 }
 
+
 .banner .buttons button{
     border:none;
     outline:none;
@@ -166,7 +167,7 @@ section.banner{
     transform:translateY(-8px);
 }
 
-.buttons button:nth-of-type(2){
+ .buttons button:nth-of-type(2){
     background-color:transparent;
     border: 3px solid #ef7215;
     color:#fff;
@@ -175,7 +176,7 @@ section.banner{
     z-index: 1;
 }
 
-.buttons button:nth-of-type(2) span{
+ .buttons button:nth-of-type(2) span{
     position: absolute;
     top:0;
     left:0;
@@ -188,7 +189,7 @@ section.banner{
 }
 
 
-.buttons button:nth-of-type(2):hover span{
+ .buttons button:nth-of-type(2):hover span{
     width:100%;
 }
 
